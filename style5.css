@@ -1,0 +1,396 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+#arrow-up{
+	
+	color: white;
+	animation: arrowMove 2s infinite ease-in-out;
+	font-size: 20px;
+  }
+  .upe{
+	position: fixed;
+	transition: .6s;
+	bottom: 10px;
+	right: 20px;
+	padding: 15px;
+	background-color: #460F19;
+	border: none;
+	border-radius: 3px;
+	behavior: smooth;
+	cursor: pointer;
+	animation: move 2s infinite ease-in-out;
+	z-index: 99;}
+	.upe:hover{
+		background-color: #D08C3B;
+	}
+	
+@keyframes move {
+	0% {
+		transform: translateY(0);
+		}
+		50% {
+		transform: translateY(-15px);
+		}
+		100% {
+		transform: translateY(0);
+		}
+}
+@keyframes arrowMove {
+	0% {
+		transform: translateY(0);
+		}
+		50% {
+		transform: translateY(-5px);
+		}
+		100% {
+		transform: translateY(0);
+		}
+}
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.9)), url("/wp3603140-pizza-hut-wallpapers5.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;overflow: hidden;
+}
+nav img{
+    filter: grayscale(0.2);
+    width: 100px;
+    
+}
+@media (max-width:768px) {
+    nav img {
+        width: 50px;
+        padding-top: 10px;
+    }
+    .navs a {
+        
+        font-size: 10px;
+        
+    }
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+}
+nav .navs {
+    flex: 1;
+    text-align: right;
+}
+.navs ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navs a {
+    color: aliceblue;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.navs a:hover {
+    color: #D08C3B;
+    font-weight: 700;
+}
+.maintext{
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding-bottom: 10px;
+}
+.maintext h1{
+    padding-bottom: 20px;
+    font-size: 3.5rem;
+}
+.maintext p {
+    margin:10px 0px 40px;
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgb(252, 252, 252);
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 34px;
+    font-size: 1.5rem;
+    
+    transition: .3s ease-in-out;
+}
+.btn:hover{
+    font-weight: 700;
+    color: #D08C3B;
+    background-color: #460F19;
+    border: 1px solid #460F19;
+}
+@media (max-width:700px) {
+    .maintext img{
+        width: 300px;
+    }
+    .navs ul li{
+        padding-top: 16px;
+        display: block;
+    }
+    .navs{
+        position: absolute;
+        background:linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)), #460F19;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .navs ul{
+        padding: 40px;
+    }
+    .fas{
+        visibility: visible!important;
+    }
+    
+}
+.filter{
+    filter: grayscale(0.5);
+}
+#OurMenu{
+    background-color: #460f19d0;
+}
+.Menu{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    
+}
+.Menu h1{
+    font-size: 4rem;
+    font-weight: bold;
+    color: aliceblue;
+
+}
+.courses p {
+    font-size: 1.5rem;
+    color: #777;
+}
+.fas {
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
+    color: white;
+    right: 20px;
+    visibility: hidden;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 1s ;
+    top: 1;
+}
+
+.Menu .container{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    gap: 40px;
+    margin-left: 10%;
+    
+}
+.pizzas{
+    position: relative;
+    padding:15px;
+      background-color: white;
+      width: 300px;
+      box-shadow: 0px 12px 20px 0px rgb(0 0 0 /13%),0px 2px 4px 0px rgb(0 0 0 / 12%);
+      cursor: pointer;
+     
+      
+}
+@media (max-width:768px) {
+    .Menu .container{
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+        gap: 40px;
+        margin-left: 25%;
+        
+    }
+}
+@media (max-width:690px) {
+    .Menu .container{
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+        gap: 40px;
+        margin-left: 1%;
+        
+    }
+}
+.pizzas::after{
+    content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 300px;
+	height: 229px;
+	background-color: #460F19;
+    opacity: 0;
+    transition: opacity  .3s ease;
+}
+.pizzas:hover::after{
+    opacity: 0.9;
+}
+.pizzas:hover::before{
+    content: "25$";
+    position: absolute;
+	left: 38%;
+	top: 20%;
+    z-index: 999;
+    color: #D08C3B;
+    font-size: 3rem;
+    transition: all 3s;
+}
+
+.pizzas h1{
+    color: #460F19;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.btn-color{
+    margin-top: 30px;
+    color: #460F19;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+ 
+
+  input[type=submit] {
+    background-color: #460F19;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+
+  input[type=submit]:hover {
+    background-color: #D08C3B;
+  }
+  form{
+    width: 80%;
+    margin: auto;
+    
+    padding-top: 10px;
+    padding-bottom: 100px;
+  }
+  
+  .dcontainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  #AboutUs{
+    background-image:linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.9)), url("/pizzaqoute5.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+  }
+  
+  .aboutext{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+   
+    
+  }
+  span{
+    font-size: 3rem;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+   
+  }
+  .textpizza h1{
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    font-family: "sharp sans extra bold","helvetica-neue","century gothic",helvetica,arial,sans-serif;
+    padding: 1px;
+     letter-spacing: 2px;
+  }
+  .para{
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    width: 30%;
+    font-size: 1.7rem;
+    color: white;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px; overflow: hidden;
+  }
+  @media (max-width:768px) {
+    #AboutUs{
+        min-height: 130vh;
+    }span{
+    font-size: 1rem;
+  }
+  .aboutext{
+    left: 10%;
+  }
+    .textpizza h1{
+        font-size: 2.6rem;
+        
+    }
+    .para{
+        width: 100%;
+       left: 0;
+       padding-left: 2px;
+        font-size: 1rem;
+        line-height: 2;
+    }
+  }
+  footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 70%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+  }
+  footer i{
+    font-size: 1.5rem;
+    padding-right: 10px;
+    padding-top: 20px;
+    color: #691625fb;
+    transition: .3s;
+  }
+  footer i:hover{
+    color: #D08C3B;
+  }
