@@ -55,7 +55,7 @@ html{
 header{
     min-height: 100vh;
     width: 100%;
-    background-image:  linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.9)), url("https://github.com/Ahmedhany23/ProjectPizza/blob/main/wp3603140-pizza-hut-wallpapers5.jpg");
+    background-image:  linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.9)), url("https://ahmedhany23.github.io/ProjectPizza/pizzaqoute5.jpg");
     background-position: center;
     background-size: cover;
     position: relative;overflow: hidden;
